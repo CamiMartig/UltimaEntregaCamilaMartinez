@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/*Body*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+/*TEXTO MAIN*/
+.textomain {
+  font-size: small;
+  text-align: center;
+}
+.textomain h2 {
+  font-weight: normal;
+}
+.textomain h3 {
+  font-weight: normal;
+}
+
+/*NAV*/
+header {
+  background-color: #f0cffa;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h1 {
+  font-weight: 100;
+}
+header .menu {
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+  border-color: #ecc7f8;
+  margin-bottom: 0px;
+}
+header .menu li {
+  list-style: none;
+}
+header .menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*FOOTER*/
+.flexfooter {
+  display: flex;
+  background-color: #f0cffa;
+  justify-content: center;
+}
+.flexfooter .diseñofooter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  align-self: center;
+}
+.flexfooter .diseñofooter a {
+  margin: 5px;
+}
+.flexfooter .diseñofooter h3 {
+  font-size: medium;
+  font-weight: normal;
+  align-content: center;
+}
+
+.flexfootermain {
+  margin-top: 220px;
+}
+
+/*INDEX*/
+.mainindex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url(../images/CakeCupcake.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+}
+.mainindex .textomainindex {
+  font-size: small;
+  text-align: center;
+  margin-top: 200px;
+}
+.mainindex .textomainindex h1 {
+  font-weight: 400;
+  font-size: xx-large;
+}
+.mainindex .textomainindex h2 {
+  font-weight: 300;
+  font-size: xx-large;
+}
+
+.estilo-wave-index {
+  margin-top: -300px;
+}
+
+/*Seccion Productos Index*/
+.estilo-sectiontortas-index, .estilo-cupcakes .estilo-sectioncupcakes-index, .estilo-cookie .estilo-sectioncookies-index {
+  background-color: #a8a0f3;
+  height: 600px;
+  justify-content: space-evenly;
+}
+.estilo-sectiontortas-index .estilo-texto, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto, .estilo-cookie .estilo-sectioncookies-index .estilo-texto {
+  justify-items: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.estilo-sectiontortas-index .estilo-texto h2, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto h2, .estilo-cookie .estilo-sectioncookies-index .estilo-texto h2 {
+  font-weight: 400;
+  font-size: xx-large;
+}
+.estilo-sectiontortas-index .estilo-texto h3, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto h3, .estilo-cookie .estilo-sectioncookies-index .estilo-texto h3 {
+  font-weight: 300;
+  font-size: xx-large;
+}
+.estilo-sectiontortas-index .estilo-imagenproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-imagenproductos, .estilo-cookie .estilo-sectioncookies-index .estilo-imagenproductos {
+  border-radius: 50px;
+}
+
+.estilo-cookie {
+  margin-bottom: -260px;
+  margin-top: -250px;
+}
+.estilo-cookie .estilo-sectioncookies-index {
+  background-color: #fbf3b9;
+}
+
+.estilo-cupcakes {
+  margin-bottom: -300px;
+}
+.estilo-cupcakes .estilo-sectioncupcakes-index {
+  margin-top: -10px;
+  background-color: #fa9262;
+}
+
+.flex-productos {
+  display: flex;
+}
+
+/*Pagina Producto*/
+/*Pagina Tortas*/
+.paginaproductos, .paginacupcakes, .paginacookies {
+  background-color: #a8a0f3;
+}
+.paginaproductos img, .paginacupcakes img, .paginacookies img {
+  border: solid;
+  border-color: #978df2;
+  border-radius: 30px;
+}
+
+/*Grid*/
+.contenedor-grid {
+  display: grid;
+  grid-template-areas: "texto-cookies-torta-cupcake texto-cookies-torta-cupcake texto-cookies-torta-cupcake" "producto1 producto2 producto3" "parrafoproducto1 parrafoproducto2 parrafoproducto3" "producto4 producto5 producto6" "parrafoproducto4 parrafoproducto5 parrafoproducto6";
+  grid-template-columns: repeat(3, 20%);
+  grid-template-rows: 30px repeat(450px);
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenedor-grid .texto-cookies-torta-cupcake {
+  grid-area: texto-cookies-torta-cupcake;
+  margin-top: 50px;
+}
+.contenedor-grid .producto1 {
+  grid-area: producto1;
+  width: 300px;
+}
+.contenedor-grid .producto2 {
+  grid-area: producto2;
+  width: 300px;
+}
+.contenedor-grid .producto3 {
+  grid-area: producto3;
+  width: 300px;
+}
+.contenedor-grid .producto4 {
+  grid-area: producto4;
+  width: 300px;
+}
+.contenedor-grid .producto5 {
+  grid-area: producto5;
+  width: 300px;
+}
+.contenedor-grid .producto6 {
+  grid-area: producto6;
+  width: 300px;
+}
+
+/*Extend -- cambio color fondo y sombra imagenes en pagina de cookies y cupcakes*/
+.paginacookies {
+  background-color: #fbf3b9;
+}
+
+.paginacookies img {
+  border-color: #f6e98c;
+}
+
+.paginacupcakes {
+  background-color: #fa9262;
+}
+
+.paginacupcakes img {
+  border-color: #f7b293;
+}
+
+/*Animacion Productos*/
+.animacionProductos:hover {
+  transform: translate(130px, -130px);
+  transform: scale(1.5, 1.5);
+  animation-name: myAnimation;
+  animation-iteration-count: unset;
+  animation-duration: 0.5s;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*PAGINA CONTACTO*/
+.paginacontacto {
+  height: 600px;
+  background-color: #B7B1F2;
+  padding: 2%;
+  display: flex;
+  gap: 100px;
+}
+.paginacontacto h1 {
+  font-weight: normal;
+}
+.paginacontacto .formulario {
+  padding: 20px;
+  margin-left: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.paginacontacto .formulario input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.paginacontacto .formulario textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+}
+.paginacontacto .formulario button {
+  justify-items: center;
+}
+.paginacontacto .formulario label {
+  display: block;
+  margin-top: 10px;
+}
+.paginacontacto .fotocontacto {
+  width: 800px;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/*PAGINA SOBRE MI*/
+.sobremi {
+  background-color: #f0cffa;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+.sobremi .sobremidisenio {
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+}
+.sobremi .sobremidisenio img {
+  height: 500px;
+  margin: 10px;
+  background-color: #e8b6f7;
+  border-radius: 30px;
+}
+
+/*MediaQ*/
+/*NAV GENERAL*/
+@media (max-width: 800px) {
+  header .menu {
+    display: none;
+  }
+  header .menu-hamburguesa {
+    visibility: visible;
+    justify-items: center;
+  }
+  header .menu-hamburguesa .btn-secondary {
+    color: #100e0e;
+    background-color: #e8bcf6;
+    border: none;
+  }
+}
+@media (min-width: 801px) {
+  header .menu {
+    visibility: visible;
+  }
+  .menu-hamburguesa {
+    display: none;
+  }
+}
+/*INDEX*/
+@media (max-width: 1000px) {
+  .mainindex {
+    background-size: cover;
+    height: 1000px;
+  }
+  .mainindex .textomainindex {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .mainindex .textomainindex h1 {
+    font-weight: 500;
+    font-size: large;
+  }
+  .mainindex .textomainindex h2 {
+    font-weight: 300;
+    font-size: small;
+  }
+  .flexfooterindex {
+    height: 100px;
+  }
+  .wave-mediaquery {
+    display: none;
+  }
+}
+@media (min-width: 1001px) {
+  .mainindex {
+    height: 1000px;
+  }
+}
+/*INDEX Seccion Productos*/
+/*TORTAS*/
+@media (max-width: 1000px) {
+  .wave-mediaquery {
+    visibility: hidden;
+  }
+  .flex-productos {
+    display: none;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1400px) {
+  .estilo-sectiontortas-index, .estilo-cupcakes .estilo-sectioncupcakes-index {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos {
+    justify-items: center;
+    font-size: small;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos h2, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h2, .estilo-sectiontortas-index .estilo-texto-productos h3, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h3 {
+    margin-top: 40px;
+    font-weight: 300;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos .textomediaqueryproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos .textomediaqueryproductos {
+    display: none;
+  }
+  .estilo-sectiontortas-index img, .estilo-cupcakes .estilo-sectioncupcakes-index img {
+    margin-top: 30px;
+  }
+  .estilo-sectiontortas-index .estilo-imagenproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-imagenproductos {
+    height: 300px;
+    align-items: start;
+  }
+}
+@media (min-width: 1401px) {
+  .estilo-sectiontortas-index, .estilo-cupcakes .estilo-sectioncupcakes-index {
+    height: 1000px;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos {
+    justify-items: center;
+    align-content: center;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos h2, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h2, .estilo-sectiontortas-index .estilo-texto-productos h3, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h3 {
+    font-weight: 300;
+    font-size: xx-large;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos h2 .textomediaqueryproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h2 .textomediaqueryproductos, .estilo-sectiontortas-index .estilo-texto-productos h3 .textomediaqueryproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos h3 .textomediaqueryproductos {
+    display: none;
+  }
+  .estilo-sectiontortas-index .estilo-imagenproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-imagenproductos {
+    margin-top: 200px;
+  }
+  .estilo-cookie .wave-mediaquery {
+    display: unset;
+  }
+  .estilo-cookie .estilo-sectioncookies-index {
+    height: 1000px;
+  }
+  .estilo-cookie .estilo-sectioncookies-index .estilo-texto-productos {
+    justify-items: center;
+    align-content: center;
+  }
+  .estilo-cookie .estilo-sectioncookies-index .estilo-texto-productos h2, .estilo-cookie .estilo-sectioncookies-index .estilo-texto-productos h3 {
+    font-weight: 300;
+    font-size: xx-large;
+  }
+  .estilo-cookie .estilo-sectioncookies-index .estilo-texto-productos h2 .textomediaqueryproductos, .estilo-cookie .estilo-sectioncookies-index .estilo-texto-productos h3 .textomediaqueryproductos {
+    display: none;
+  }
+  .estilo-cookie .estilo-sectioncookies-index .estilo-imagenproductos {
+    margin-top: 200px;
+  }
+}
+/*Cupcakes*/
+.estilo-cupcakes .wave-mediaquery {
+  display: contents;
+  margin-top: -100px;
+}
+.estilo-cupcakes .estilo-sectioncupcakes-index {
+  height: 1000px;
+}
+.estilo-cupcakes .estilo-sectioncupcakes-index .textomediaqueryproductos {
+  display: none;
+}
+.estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos {
+  margin-left: 30px;
+}
+
+@media (min-width: 1600px) {
+  .estilo-wave-index {
+    margin-top: -600px;
+  }
+  .estilo-sectiontortas-index, .estilo-cupcakes .estilo-sectioncupcakes-index {
+    margin-top: -10px;
+    height: 1000px;
+    align-items: start;
+    justify-items: center;
+  }
+  .estilo-sectiontortas-index .estilo-texto-productos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-texto-productos {
+    margin-top: 100px;
+  }
+  .estilo-sectiontortas-index .estilo-imagenproductos, .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-imagenproductos {
+    height: 500px;
+    margin: 0px;
+  }
+  .estilo-cookie {
+    margin-top: -500px;
+  }
+  .estilo-cookie .estilo-sectioncookies-index {
+    height: 1000px;
+  }
+  .estilo-cookie .estilo-sectioncookies-index .estilo-imagenproductos {
+    height: 500px;
+  }
+  .estilo-cupcakes {
+    margin-top: -500px;
+  }
+  .estilo-cupcakes .estilo-sectioncupcakes-index {
+    height: 1000px;
+  }
+  .estilo-cupcakes .estilo-sectioncupcakes-index .estilo-imagenproductos {
+    height: 500px;
+  }
+}
+/*PAGINA PRODUCTOS*/
+@media (max-width: 1000px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-areas: "texto-cookies-torta-cupcake" "producto1" "parrafoproducto1" "producto2" "parrafoproducto2" "producto3" "parrafoproducto3" "producto4" "parrafoproducto4" "producto5" "parrafoproducto5" "producto6" "parrafoproducto6";
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .contenedor-grid .parrafoproducto1 {
+    text-align: start;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1100px) {
+  .contenedor-grid {
+    display: grid;
+    grid-template-areas: "texto-cookies-torta-cupcake texto-cookies-torta-cupcake" "producto1 producto2" "parrafoproducto1 parrafoproducto2" "producto3 producto4" "parrafoproducto3 parrafoproducto4" "producto5 producto6" "parrafoproducto5 parrafoproducto6";
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+}
+/*PAGINA SOBRE MI MAIN*/
+@media (max-width: 480px) {
+  .sobremi {
+    flex-direction: column;
+    height: 100%;
+  }
+  .sobremi .sobremidisenio {
+    display: flex;
+    margin-top: 20px;
+    width: 300px;
+  }
+  .sobremi .sobremidisenio img {
+    height: 250px;
+    align-items: center;
+  }
+  .sobremi .sobremidisenio .sobremimediaquery {
+    margin-top: 10px;
+    align-items: center;
+  }
+  .sobremi .sobremidisenio .sobremihidden {
+    display: none;
+  }
+}
+@media (min-width: 481px) and (max-width: 850px) {
+  .sobremi {
+    flex-direction: column;
+  }
+  .sobremi .sobremidisenio {
+    margin: 10px;
+    justify-items: center;
+  }
+  .sobremi .sobremidisenio img {
+    height: 300px;
+  }
+  .sobremi .sobremidisenio .sobremimediaquery {
+    margin-top: 10px;
+    align-items: center;
+    width: 80%;
+  }
+  .sobremi .sobremidisenio .sobremihidden {
+    display: none;
+  }
+}
+/*PAGINA CONTACTO MAIN*/
+@media (max-width: 600px) {
+  .paginacontacto {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .paginacontacto .formulario {
+    margin-left: auto;
+  }
+  .paginacontacto .formulario h2 {
+    justify-self: center;
+  }
+  .fotocontactomediaquery {
+    display: none;
+  }
+  .fotocontactomediaquery .fotocontacto {
+    width: 400px;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1099px) {
+  .paginacontacto {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .paginacontacto .formulario {
+    margin: 0px;
+  }
+  .paginacontacto .formulario h2 {
+    justify-self: center;
+  }
+  .fotocontactomediaquery img {
+    display: none;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .paginacontacto .formulario {
+    margin-left: auto;
+  }
+  .paginacontacto .fotocontactomediaquery img {
+    width: 600px;
+  }
+}
+/*FOOTER GENERAL*/
+@media (max-width: 1000px) {
+  .flexfooter {
+    font-size: 15px;
+    justify-content: space-around;
+  }
+  .flexfooter .diseniofooter {
+    margin: 0px;
+    align-items: center;
+  }
+  .flexfooter .diseniofooter a {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1001px) {
+  .flexfooter {
+    height: 90px;
+  }
+}
+
+/*# sourceMappingURL=style1.css.map */

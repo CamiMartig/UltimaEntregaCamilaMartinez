@@ -1,0 +1,85 @@
+@use "variables" as*;
+
+/*Pagina Producto*/
+/*Pagina Tortas*/
+.paginaproductos{ 
+    background-color:#a8a0f3;
+    img{
+        border: solid;
+        border-color: #978df2;
+        border-radius: 30px;
+    }
+}
+/*Grid*/
+.contenedor-grid{
+    display: grid;
+    grid-template-areas: 
+    "texto-cookies-torta-cupcake texto-cookies-torta-cupcake texto-cookies-torta-cupcake"
+    "producto1 producto2 producto3"
+    "parrafoproducto1 parrafoproducto2 parrafoproducto3"
+    "producto4 producto5 producto6"
+    "parrafoproducto4 parrafoproducto5 parrafoproducto6";
+    
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: 30px repeat(450px);
+    justify-content: space-evenly;
+    align-items: center;
+    .texto-cookies-torta-cupcake{
+        grid-area: texto-cookies-torta-cupcake;
+        margin-top: 50px;   
+    }
+    .producto1{
+        grid-area: producto1;
+        width: 300px;
+    }
+    .producto2{
+        grid-area: producto2;
+        width: 300px;
+    }
+    .producto3{
+        grid-area: producto3;
+        width: 300px;
+    }
+    .producto4{
+        grid-area: producto4;
+        width: 300px;
+    }
+    .producto5{
+        grid-area: producto5;
+        width: 300px;
+    }
+    .producto6{
+        grid-area: producto6;
+        width: 300px;
+    }
+}
+/*Extend -- cambio color fondo y sombra imagenes en pagina de cookies y cupcakes*/
+.paginacookies{
+    @extend .paginaproductos;
+    background-color: #fbf3b9;
+
+    }
+.paginacookies img{
+    border-color: #f6e98c;
+}
+.paginacupcakes{
+    @extend .paginaproductos;
+    background-color: #fa9262;
+}
+.paginacupcakes img{
+    border-color: #f7b293;
+}
+
+/*Animacion Productos*/
+.animacionProductos:hover{
+    transform: translate(130px, -130px) ;
+    transform: scale(1.5,1.5);
+    animation-name: myAnimation;
+    animation-iteration-count: unset;
+    animation-duration: 0.5s;
+}
+@keyframes myAnimation{
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+
+}

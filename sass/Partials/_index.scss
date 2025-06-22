@@ -1,0 +1,71 @@
+@use "./variables" as*;
+
+/*INDEX*/
+.mainindex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url(../images/CakeCupcake.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    .textomainindex{
+        font-size: small;
+        text-align: center;
+        margin-top: 200px;
+        h1{
+            font-weight: 400;
+            font-size: xx-large;
+        }
+        h2{
+            font-weight: 300;
+            font-size: xx-large;
+        }
+    }
+}  
+.estilo-wave-index{
+    margin-top: -300px;
+}
+
+/*Seccion Productos Index*/
+.estilo-sectiontortas-index{
+    background-color: #a8a0f3;
+    height: 600px;
+    justify-content: space-evenly;
+    .estilo-texto{
+        justify-items: center;
+        align-items: center;
+        margin-top: 100px;
+        h2{
+            font-weight: 400;
+            font-size: xx-large;
+        }
+        h3{
+            font-weight: 300;
+            font-size: xx-large;
+        }
+    }
+    .estilo-imagenproductos{
+    border-radius: 50px;
+    }
+}
+.estilo-cookie{
+    margin-bottom: -260px;
+    margin-top: -250px;
+    .estilo-sectioncookies-index{
+    @extend .estilo-sectiontortas-index;
+    background-color: #fbf3b9;
+    }
+}
+.estilo-cupcakes{
+    margin-bottom: -300px;
+    .estilo-sectioncupcakes-index{
+    @extend .estilo-sectiontortas-index;
+    margin-top: -10px;
+    background-color: #fa9262;
+    }
+}
+.flex-productos{
+    display: flex;
+    }

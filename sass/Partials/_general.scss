@@ -1,0 +1,71 @@
+@use "variables" as*;
+
+/*Body*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+/*TEXTO MAIN*/
+.textomain{
+    font-size: small;
+    text-align: center;
+    h2{
+        font-weight: normal;
+    }
+    h3{
+        font-weight: normal;
+    }
+}
+
+/*NAV*/
+header{
+    background-color: $colorfondo;
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-weight: 100;
+        }
+    }
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        border: solid;
+        border-color: #ecc7f8;
+        margin-bottom: 0px;
+        li{ 
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }    
+}
+
+/*FOOTER*/
+.flexfooter{
+    display: flex;
+    background-color: $colorfondo;
+    justify-content: center;      
+    .diseñofooter{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+        align-self: center;
+        a{
+            margin: 5px;
+        }
+        h3{
+            font-size: medium;
+            font-weight: normal;
+            align-content: center;
+        }
+    }    
+}
+.flexfootermain{
+    margin-top: 220px;
+}

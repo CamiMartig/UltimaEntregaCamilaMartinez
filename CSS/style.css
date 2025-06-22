@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat"; 
+}
+
+/*HEADER*/
+header{
+    background-color: #f0cffa;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo h1{
+    font-style: italic;
+    font-weight: 100;
+}
+/*MENU*/
+ul{
+    margin-bottom: 0px;
+}
+li{ 
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    border: solid;
+    border-color: #ecc7f8;
+}
+.bg-dark{
+    background-color: #bd74c7;
+}
+/*TEXTO GENERAL*/
+.textomain{
+    font-size: small;
+    text-align: center;
+}
+.textomain h2{
+    font-weight: normal;
+}
+.textomain h3{
+    font-weight: normal;
+}
+/*INDEX*/
+.mainindex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url(../images/CakeCupcake.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+}
+
+/*Paginas Productos*/
+/*GRID PRODUCTOS*/
+.contenedor-grid{
+    display: grid;
+    grid-template-areas: 
+    "texto-cookies-torta-cupcake texto-cookies-torta-cupcake texto-cookies-torta-cupcake"
+    "producto1 producto2 producto3"
+    "parrafoproducto1 parrafoproducto2 parrafoproducto3"
+    "producto4 producto5 producto6"
+    "parrafoproducto4 parrafoproducto5 parrafoproducto6";
+    
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: 30px repeat(450px);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.texto-cookies-torta-cupcake{
+    grid-area: texto-cookies-torta-cupcake;
+    margin-top: 50px;   
+}
+
+.producto1{
+    grid-area: producto1;
+    width: 300px;
+}
+.producto2{
+    grid-area: producto2;
+    width: 300px;
+}
+.producto3{
+    grid-area: producto3;
+    width: 300px;
+}
+.producto4{
+    grid-area: producto4;
+    width: 300px;
+}
+.producto5{
+    grid-area: producto5;
+    width: 300px;
+}
+.producto6{
+    grid-area: producto6;
+    width: 300px;
+}
+
+/*Estilo PRODUCTOS*/
+/*TORTAS*/
+.paginatortas{
+    background-color:#a8a0f3 ;
+}
+.paginatortas img{
+    border: solid;
+    border-color: #978df2;
+    border-radius: 30px;
+}
+/*COOKIES*/
+.paginacookies{
+    background-color: #fbf3b4;
+}
+.paginacookies img{
+    border: solid;
+    border-color: #f6e98c;
+    border-radius: 30px;
+}
+/*CUPCAKES*/
+.paginacupcakes{
+    background-color: #f9c1a7;
+}
+.paginacupcakes img{
+    border: solid;
+    border-color: #f8b89a;
+    border-radius: 30px;
+}
+
+/*Pagina Sobre Mi*/
+.sobremi{
+    background-color: #f0cffa; 
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+.sobremidisenio{
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+}
+.sobremidisenio img{
+    height: 500px;
+    margin: 10px;
+    background-color: #e8b6f7;
+    border-radius: 30px;   
+}
+
+/*Pagina Contacto*/
+.paginacontacto{
+    height: 600px;
+    background-color: #B7B1F2 ;
+    padding: 2%;
+    display: flex;
+    gap: 100px;
+}
+.paginacontacto h2{
+    font-weight: normal;
+}
+.formulario{    
+    padding: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulario input, .formulario textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulario button{
+    justify-items: center;
+}
+.formulario label {
+    display: block;
+    margin-top: 10px;
+}
+.formulario textarea{
+    height: 100px;
+}
+.fotocontacto{
+    width: 800px;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 50px;
+}
+/*footer*/
+.flexfooter{
+    display: flex;
+    background-color: #f0cffa;
+    justify-content: center;
+    height: 70px; 
+    border: solid;
+    border-color: #ecc7f8;
+}
+
+.diseñofooter{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px; 
+}
+.diseñofooter a{
+    margin: 5px;
+}
+.diseñofooter h3{
+    font-size: medium;
+    font-weight: normal;
+    align-content: center;
+}
+
+    /*MEDIA QUERY*/
+    /*NAV*/
+@media (max-width: 600px){
+    .menu-hamburguesa{
+        visibility: visible;
+        justify-content: center;
+    }
+    .menu{
+        display: none;
+    }
+    .btn-secondary {
+        color: #100e0e;
+        background-color: #e8bcf6;
+        border: none;
+    }
+}
+@media (min-width: 601px) {
+    .menu-hamburguesa{
+        display: none;
+    }
+    .menu{
+        visibility: visible;
+    }
+}
+
+    /*PRODUCTOS*/
+@media (max-width: 600px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-areas: 
+        "texto-cookies-torta-cupcake"
+        "producto1"
+        "parrafoproducto1"
+        "producto2"
+        "parrafoproducto2"
+        "producto3"
+        "parrafoproducto3"
+        "producto4" 
+        "parrafoproducto4"
+        "producto5"
+        "parrafoproducto5"
+        "producto6"
+        "parrafoproducto6";
+        grid-template-columns: 1fr;
+        
+        justify-items: center;
+    }
+    .parrafoproducto1{
+        text-align: start;
+    }
+}
+        
+@media (min-width: 601px) and (max-width: 1100px) {
+    .contenedor-grid{
+        display: grid;
+        grid-template-areas: 
+        "texto-cookies-torta-cupcake texto-cookies-torta-cupcake"
+        "cookies1-tortaferrero-cupcakefruta cookies2-tortapeanut-cupcakemargarita"
+        "parrafocookiechips parrafocookiebrownie"
+        "cookies3-tortafrutilla-cupcakeperlas cookies4-tortaferrero1-cupcakeunicornio" 
+        "parrafocookiehabibi parrafocookieredvelvet"
+        "cookies5-tortapeanut1-cupcakeverdes cookies6-tortafrutilla1-cupcakechoco"
+        "parrafocookieferrero parrafocookiecaramelo";
+        grid-template-columns: 50% 50%;
+
+        justify-items: center;
+    }    
+}
+    /*PAGINA SOBRE MI MAIN*/
+@media (max-width: 480px){
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sobremidiseño{
+        display: flex;
+        margin-top: 20px;
+        width: 300px;
+    }
+    .sobremidiseño img{
+        height: 300px;
+        align-items: center;
+    }
+    .sobremimediaquery{
+        margin-top: 10px;
+        align-items: center;
+    }
+       .sobremihidden{
+        display: none; 
+    }
+}  
+
+@media (min-width: 481px) and (max-width: 850px){
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sobremidiseño{
+        margin: 10px;
+        justify-items: center;
+    }
+    .sobremidiseño img{
+        height: 300px;
+    }
+    .sobremimediaquery{
+        margin-top: 10px;
+        align-items: center;
+        width: 100%;
+    }
+    .sobremihidden{
+        display: none; 
+    }
+} 
+    /*PAGINA CONTACTO*/
+@media (max-width: 600px){
+    .paginacontacto{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .formulario{
+        margin-left: auto;
+    }
+    .formulario h2{
+        justify-self: center;
+    }
+    .fotocontacto{
+        width: 400px;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .fotocontactomediaquery{
+        display: none;
+    }
+}
+@media (min-width:601px) and (max-width:1099px){
+    .fotocontactomediaquery img{
+        display: none;
+    }
+    .paginacontacto{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .formulario{
+        margin: 0px;
+    }
+
+      .formulario h2{
+        justify-self: center;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1400px){
+    .fotocontactomediaquery img{
+        width: 600px;
+    }
+    .formulario{
+        margin-left: auto;
+    }
+}
+
+    /*FOOTER*/
+@media (max-width: 600px){
+    .flexfooter{
+        font-size: 15px;
+        justify-content: space-around;
+    }
+    .diseñofooter{
+        margin: 0px;
+        align-items: center;
+    }
+    .diseñofooter a{
+        justify-content: space-between;
+    }
+}
+@media (max-width: 1100px){
+    .flexfooter{
+        height: 90px;
+    }
+}
